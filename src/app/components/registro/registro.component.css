@@ -1,0 +1,10 @@
+.contenido{
+    height: 483px;
+    width: 100%;
+}
+
+.titulo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}

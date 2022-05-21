@@ -1,0 +1,35 @@
+<div class="container-fluid contenido">
+    <div class="row">
+        <h3 class="titulo">El ahorcado</h3>
+        <div class=" col-md-12 col-12 cuerpo">
+            <div class="col-md-3 d-md-block d-none bg-secondary g-0 imagen">
+                <img src="assets/{{ juego.img}}">
+            </div>
+            <div class="col-md-3 col-10 bg-secondary estado">
+                <h3>{{palabra}}</h3>
+                <button (click)="jugarDeNuevo()"> Jugar de nuevo</button>
+                <h4>Intentos</h4>
+                <div>{{juego.intentos}}</div>
+            </div>
+        </div>
+
+       <div class="col-md-12 tablero">
+            <div class="col-md-6 col-10 bg-secondary botones">
+                <button (click)="estadoJuego(letra)" *ngFor="let letra of abeceadrio">{{letra}}</button>
+            </div>
+       </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 g-2 cuerpo">
+            <div class="col-md-6">
+                <h3>Instrucciones:</h3>
+                <p>El juego consiste en adivinar la palabra. Cuentas con 5 intentos,
+                    si la letra seleccionada no se encuentra en la palabra oculta se 
+                    te descontara un intento y se desabilitara dicha letra. 
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>

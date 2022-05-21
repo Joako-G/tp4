@@ -1,0 +1,30 @@
+<div class="row contenido">
+    <div class="col-md-8 offset-md-2 col-6 offset-2 g-2">
+        <h3 class="titulo">Registro de pasajes</h3>
+        <button class="btn btn-primary" (click)="llamarAgregarPasaje()">Agregar Pasaje</button>
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                  <th scope="col">D.N.I Pasajero</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col-">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of pasajes">
+                    <td>{{p.dniPasajero}}</td>
+                    <td>{{p.precioPasaje}}</td>
+                    <td>{{p.categoriaPasaje}}</td>
+                    <td>{{p.fechaCompra | date:'longDate'}}</td>
+                    <td>
+                        <button (click)="eliminarPasaje(p)" class="btn btn-primary"> Eliminar</button>
+                        <button (click)="seleccionarPasaje(p)" class="btn btn-primary"> Seleccionar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,13 @@
+.contenido{
+    height: 483px;
+    width: 100%;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+
+select{
+    margin-bottom: 20px;
+}

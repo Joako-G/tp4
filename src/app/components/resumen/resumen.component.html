@@ -1,0 +1,31 @@
+<div class="row contenido">
+    <div class="col-md-8 offset-md-2 g-2">
+      <h3 class="titulo">Pasajes por categoria</h3>
+      <label for="categoria">Categoria</label>
+        <select class="form-select" name="categoria"
+        [(ngModel)]="categoriaSelect" (ngModelChange)="onChange($event)">
+            <option selected>Eliga categoria</option>
+            <option *ngFor="let cat of categorias" [value]="cat" name="categoria">
+              {{cat}}
+            </option>
+        </select>
+        <table class="table ">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">D.N.I Pasajero</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Fecha</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of pasajesXCat">
+                <td>{{p.dniPasajero}}</td>
+                <td>{{p.precioPasaje}}</td>
+                <td>{{p.categoriaPasaje}}</td>
+                <td>{{p.fechaCompra | date:'longDate'}}</td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
