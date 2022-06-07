@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { timeout } from 'rxjs';
 import { Noticia } from 'src/app/models/noticia';
 
 
