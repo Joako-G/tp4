@@ -1,4 +1,4 @@
-# Trabajo Practico N°4 - Segunda Parte Angular
+# Trabajo Practico N°4 - Primera y Segunda Parte Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
